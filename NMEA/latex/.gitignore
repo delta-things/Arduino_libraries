@@ -1,0 +1,10 @@
+*.tex
+*.sty
+*.aux
+*.idx
+*.ilg
+*.ind
+*.log
+*.out
+*.toc
+Makefile
