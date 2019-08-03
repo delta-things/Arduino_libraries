@@ -187,7 +187,7 @@ public:
 
   // Sends custom JSON telemetry string to the ThingsBoard.
   inline bool sendTelemetryJson(const char *json) {
-    return m_client.publish("v1/devices/me/telemetry", json);
+    return m_client.publish("v1/gateway/telemetry", json);
   }
 
   //----------------------------------------------------------------------------
