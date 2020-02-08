@@ -187,6 +187,10 @@ public:
 
   // Sends custom JSON telemetry string to the ThingsBoard.
   inline bool sendTelemetryJson(const char *json) {
+    return m_client.publish("v1/devices/me/telemetry", json);
+  }
+
+  inline bool sendGatewayTelemetryJson(const char *json) {
     return m_client.publish("v1/gateway/telemetry", json);
   }
 
@@ -218,9 +222,13 @@ public:
     return sendDataArray(data, data_count, false);
   }
 
-  // Sends custom JSON with attributes to the ThingsBoard.
-  inline bool sendAttributeJSON(const char *json) {
-    return m_client.publish("v1/devices/me/attributes", json);
+  // Sends custom JSON telemetry string to the ThingsBoard.
+  inline bool sendTelemetryJson(const char *json) {
+    return m_client.publish("v1/devices/me/telemetry", json);
+  }
+
+  inline bool sendGatewayTelemetryJson(const char *json) {
+    return m_client.publish("v1/gateway/telemetry", json);
   }
 
   //----------------------------------------------------------------------------
